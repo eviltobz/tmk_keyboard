@@ -28,23 +28,23 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // qwerty at the moment!!!
     KEYMAP(  // layer 0 : default
         // left hand
-        EQL, 1,   2,   3,   4,   5,   ESC,
-        BSLS,Q,   W,   E,   R,   T,   FN2,
-        TAB, A,   S,   D,   F,   G,
-        LSFT,Z,   X,   C,   V,   B,   FN1,
-        LGUI,GRV, BSLS,LEFT,RGHT,
-                                      LCTL,LALT,
-                                           HOME,
-                                 BSPC,DEL, END,
+        EQL,  1,   2,   3,   4,   5,  HOME,
+        TAB,  Q,   W,   F,   P,   G,   END,
+        ESC,  A,   R,   S,   T,   D,
+       NUBS,  Z,   X,   C,   V,   B,   LCTL,	// NUBS = Non US Backslash
+        GRV, NO,  NO,LBRC,RBRC,
+                                      DEL,LALT,
+                                          LGUI,
+                                  NO,BSPC,LSFT, // NO will be layer shift to numpad!!!
         // right hand
-             FN3, 6,   7,   8,   9,   0,   MINS,
-             LBRC,Y,   U,   I,   O,   P,   RBRC,
-                  H,   J,   K,   L,   SCLN,QUOT,
-             FN1, N,   M,   COMM,DOT, SLSH,RSFT,
-                       LEFT,DOWN,UP,  RGHT,RGUI,
-        RALT,RCTL,
-        PGUP,
-        PGDN,ENT, SPC
+            PGUP, 6,   7,   8,   9,    0, MINS,
+            PGDN, J,   L,   U,   Y, SCLN, NUHS,	// NUHS = Non US Hash
+                  H,   N,   E,   I,    O, QUOT,
+            RCTL, K,   M,COMM, DOT,   UP, SLSH,
+                     FN0,  NO, LEFT,DOWN, RGHT,  // FN0 = teensy key - just here temporarily!!!
+        RALT,ENT,
+        RGUI,
+        RSFT,SPC,NO	// NO will be layer shift to dev keys
     ),
 
 
