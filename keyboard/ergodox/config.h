@@ -65,7 +65,7 @@ Project located at <https://github.com/benblazak/ergodox-firmware>
 )
 
 
-
+#define KEYMAP_TOBZ
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
