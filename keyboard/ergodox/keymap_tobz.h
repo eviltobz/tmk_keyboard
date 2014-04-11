@@ -25,8 +25,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *
      */
 
-// qwerty at the moment!!!
-    KEYMAP(  // layer 0 : default
+    KEYMAP(  // layer 0 : OSX Colemak
         // left hand
         EQL,  1,   2,   3,   4,   5,  HOME,
         TAB,  Q,   W,   F,   P,   G,   END,
@@ -48,6 +47,27 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
 
+    KEYMAP(  // layer 1 : Windows Colemak
+        // left hand
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,LGUI/**/,
+        TRNS,TRNS,TRNS,TRNS,TRNS,
+                                      TRNS,TRNS,
+                                           LCTL/**/,
+                                 TRNS,TRNS,TRNS,
+        // right hand
+             TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+             TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+                  TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+         /**/RGUI,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+                       TRNS,TRNS,TRNS,TRNS,TRNS,
+        TRNS,TRNS,
+    /**/RCTL,
+        TRNS,TRNS,TRNS
+    ),
+
 };
 
 
@@ -60,7 +80,11 @@ enum function_id {
 
 static const uint16_t PROGMEM fn_actions[] = {
 
-    [0] =   ACTION_FUNCTION(TEENSY_KEY),                    // FN0  - Teensy key
+    [0] =   ACTION_FUNCTION(TEENSY_KEY),                   // FN0  - Teensy key
+    [1] =   ACTION_LAYER_SET(0, ON_BOTH),                   // FN1 - set Layer0, OSX Colemak
+    [2] =   ACTION_LAYER_SET(1, ON_BOTH),                   // FN2 - set Layer1, Windows Colemak
+    [3] =   ACTION_LAYER_SET(2, ON_BOTH),                   // FN3 - set Layer2, Windows Qwerty
+    [4] =   ACTION_LAYER_SET(3, ON_BOTH),                   // FN4 - set Layer3, Gaming - Windows Qwerty with space on left
 
 };
 
